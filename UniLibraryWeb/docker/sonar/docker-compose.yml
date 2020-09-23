@@ -5,7 +5,7 @@ services:
   sonarqube:
     build: .
     ports:
-      - 9000:9000
+      - 9090:9000
     environment:
       - sonar.jdbc.url=jdbc:postgresql://sonar-db:5432/sonar
     volumes:
