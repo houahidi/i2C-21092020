@@ -9,7 +9,8 @@ services:
       links:
          - "mysql-server:mysql"
       deploy:
-         replicas: 2
+         replicas: 4
+         
    mysql-server:
       image: mysql:5.7.28
       command: --default-authentication-plugin=mysql_native_password
@@ -17,4 +18,4 @@ services:
       environment:
          MYSQL_ROOT_PASSWORD: mysql
       ports:
-         - "3307:3306"
+         - "3306"
